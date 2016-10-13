@@ -7,10 +7,10 @@ import org.springframework.social.oauth2.OAuth2Template;
 
 public class MitreidConnectServiceProvider extends AbstractOAuth2ServiceProvider<MitreidConnect> {
 
-    public MitreidConnectServiceProvider(String clientId, String clientSecret) {
+    public MitreidConnectServiceProvider(String clientId, String clientSecret, String providerUrl) {
         super(new OAuth2Template(clientId, clientSecret,
-            "http://localhost:8081/openid-connect-server-webapp/authorize",
-            "http://localhost:8081/openid-connect-server-webapp/token"));
+            providerUrl + "/authorize",
+            providerUrl + "/token"));
     }
     
     @Override
