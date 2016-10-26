@@ -14,7 +14,7 @@ class AbstractMitreidOperations {
 
 	public AbstractMitreidOperations(boolean isUserAuthorized, String providerUrl) {
 		this.isUserAuthorized = isUserAuthorized;
-		this.apiUrlBase = providerUrl;
+		this.apiUrlBase = apiUrlBase.endsWith("/") ? providerUrl : providerUrl + "/";
 		
 	}
 	
