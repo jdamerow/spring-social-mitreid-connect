@@ -8,8 +8,8 @@ public class UserTemplate extends AbstractMitreidOperations implements UserOpera
 
     private final RestTemplate restTemplate;
 
-    public UserTemplate(RestTemplate restTemplate, boolean isAuthorizedForUser) {
-        super(isAuthorizedForUser);
+    public UserTemplate(RestTemplate restTemplate, boolean isAuthorizedForUser, String providerUrl) {
+        super(isAuthorizedForUser, providerUrl);
         this.restTemplate = restTemplate;
     }
     
